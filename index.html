@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0002 - Shoes Newsletter template | Themezy</title>
+  <title>Ozgrabnow | Themezy</title>
 
   <style type="text/css">
     body,#bodyTable,#bodyCell{
@@ -366,10 +366,13 @@
       }
     }
   </style>
+  <script src="http://cdn.bootcss.com/angular.js/1.4.12/angular.js"></script>
+  <script src="./controller.js"></script>
 </head>
 
-<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-  <center>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" ng-app="Newsletter">
+  <center ng-controller='NewsletterController as datas'>
+
     <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
       <tr>
         <td align="center" valign="top" id="bodyCell">
@@ -391,9 +394,7 @@
                                   <tr>
 
                                     <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;">
-                                      If you want to unsubscribe,
-                                      <a href="#">click here</a>
-                                      .
+                                      If you want to unsubscribe, <a href="#">click here</a>.
                                     </td>
                                   </tr>
                                 </tbody>
@@ -526,23 +527,7 @@
                           </tr>
                         </tbody>
                       </table>
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyImageBlock">
-                        <tbody class="themezyImageBlockOuter">
-                          <tr>
-                            <td valign="top" style="padding:9px" class="themezyImageBlockInner">
-                              <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="themezyImageContentContainer">
-                                <tbody>
-                                  <tr>
-                                    <td class="themezyImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
 
-                                      <img align="center" alt="" src="http://g01.a.alicdn.com/kf/HTB18ce0LFXXXXbtXpXXq6xXFXXXG/1pc-Hot-1-44-LCD-Wireless-FM-Transmitter-Car-MP3-Player-for-SD-TF-Card-USB.jpg" width="370" style="max-width:740px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="themezyImage"></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
                     </td>
                   </tr>
                 </table>
@@ -554,70 +539,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
                   <tr>
                     <td valign="top" class="bodyContainer">
-                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyTextBlock">
-                        <tbody class="themezyTextBlockOuter">
-                          <tr>
-                            <td valign="top" class="themezyTextBlockInner">
-
-                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="282" class="themezyTextContentContainer">
-                                <tbody>
-                                  <tr>
-
-                                    <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;">
-
-                                      <h3 class="null">
-                                        <span style="color:#0B0B0B"> <strong>Car MP3 Player</strong>
-                                        </span>
-                                      </h3>
-                                      1pc Hot 1.44" LCD Wireless FM Transmitter Car MP3 Player, for SD TF Card USB Drive Remote Newest
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-
-                              <table align="right" border="0" cellpadding="0" cellspacing="0" width="282" class="themezyTextContentContainer">
-                                <tbody>
-                                  <tr>
-
-                                    <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-right:18px; padding-bottom:9px; padding-left:0;">
-                                    <strong>
-                                      <span style="font-size:24px">
-                                        <span style="color:#606060;">
-                                          INSTEAD OF
-                                          <span style="text-decoration:line-through;">$7.98</span>
-                                        </span>
-                                        <a class="grabnow" href="#" style="color:#d63f36; font-size:60px;">
-                                          BUY NOW!
-                                          <span style="color:#FFFFFF; font-size:50px">$5.98</span>
-                                        </a>
-                                      </span></strong> 
-
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
-                      <tbody class="themezyDividerBlockOuter">
-                        <tr>
-                          <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
-                            <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div ng-repeat="obj in datas.data">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyCaptionBlock">
                       <tbody class="themezyCaptionBlockOuter">
                         <tr>
@@ -632,7 +554,7 @@
                                         <tr>
                                           <td class="themezyCaptionRightImageContent" valign="top">
 
-                                            <img alt="" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></td>
+                                            <img alt="" ng-src="{{obj.image}}" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -641,20 +563,20 @@
                                         <tr>
                                           <td valign="top" class="themezyTextContent">
                                             <h3 class="null">
-                                              <span style="color:#0B0B0B">4 In 1 Dual USB Car Charger Adapter</span>
+                                              <span style="color:#0B0B0B" ng-bind="obj.title">4 In 1 Dual USB Car Charger Adapter</span>
                                             </h3>
                                             <br>
-                                            2015 Hot Easy to Carry 4 In 1 Dual USB Car Charger Adapter With Voltage DC 5V 3.1A Tester for iPhone 8P39
+                                            {{obj.desc}}
                                             <br>
                                             <br>
                                             <strong><span style="font-size:24px">
                                                 <span style="color:#606060;">
                                                   INSTEAD OF
-                                                  <span style="text-decoration:line-through;">$7.98</span>
+                                                  <span style="text-decoration:line-through;">{{obj.oldprice}}</span>
                                                 </span>
-                                                <a class="grabnow" href="#">
+                                                <a class="grabnow" href="{{obj.buy}}">
                                                   VIEW AND BUY!
-                                                  <span style="color:#FFFFFF; font-size:28px">$5.98</span>
+                                                  <span style="color:#FFFFFF; font-size:28px">{{obj.price}}</span>
                                                 </a>
                                               </span></strong> 
                                           </td>
@@ -687,147 +609,8 @@
                         </tr>
                       </tbody>
                     </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyCaptionBlock">
-                      <tbody class="themezyCaptionBlockOuter">
-                        <tr>
-                          <td class="themezyCaptionBlockInner" valign="top" style="padding:9px;">
+                    </div>
 
-                            <table border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightContentOuter" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td valign="top" class="themezyCaptionRightContentInner" style="padding:0 9px ;">
-                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightImageContentContainer">
-                                      <tbody>
-                                        <tr>
-                                          <td class="themezyCaptionRightImageContent" valign="top">
-
-                                            <img alt="" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <table class="themezyCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="264">
-                                      <tbody>
-                                        <tr>
-                                          <td valign="top" class="themezyTextContent">
-                                            <h3 class="null">
-                                              <span style="color:#0B0B0B">4 In 1 Dual USB Car Charger Adapter</span>
-                                            </h3>
-                                            <br>
-                                            2015 Hot Easy to Carry 4 In 1 Dual USB Car Charger Adapter With Voltage DC 5V 3.1A Tester for iPhone 8P39
-                                            <br>
-                                            <br>
-                                            <strong><span style="font-size:24px">
-                                                <span style="color:#606060;">
-                                                  INSTEAD OF
-                                                  <span style="text-decoration:line-through;">$7.98</span>
-                                                </span>
-                                                <a class="grabnow" href="#">
-                                                  VIEW AND BUY!
-                                                  <span style="color:#FFFFFF; font-size:28px">$5.98</span>
-                                                </a>
-                                              </span>
-                                            </strong>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
-                      <tbody class="themezyDividerBlockOuter">
-                        <tr>
-                          <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
-                            <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyCaptionBlock">
-                      <tbody class="themezyCaptionBlockOuter">
-                        <tr>
-                          <td class="themezyCaptionBlockInner" valign="top" style="padding:9px;">
-
-                            <table border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightContentOuter" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td valign="top" class="themezyCaptionRightContentInner" style="padding:0 9px ;">
-                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightImageContentContainer">
-                                      <tbody>
-                                        <tr>
-                                          <td class="themezyCaptionRightImageContent" valign="top">
-
-                                            <img alt="" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <table class="themezyCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="264">
-                                      <tbody>
-                                        <tr>
-                                          <td valign="top" class="themezyTextContent">
-                                            <h3 class="null">
-                                              <span style="color:#0B0B0B">4 In 1 Dual USB Car Charger Adapter</span>
-                                            </h3>
-                                            <br>
-                                            2015 Hot Easy to Carry 4 In 1 Dual USB Car Charger Adapter With Voltage DC 5V 3.1A Tester for iPhone 8P39
-                                            <br>
-                                            <br>
-                                            <strong>
-                                              <span style="font-size:24px">
-                                                <span style="color:#606060;">
-                                                  INSTEAD OF
-                                                  <span style="text-decoration:line-through;">$7.98</span>
-                                                </span>
-                                                <a class="grabnow" href="#">
-                                                  VIEW AND BUY!
-                                                  <span style="color:#FFFFFF; font-size:28px">$5.98</span>
-                                                </a>
-                                              </span>
-                                            </strong>
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
-                      <tbody class="themezyDividerBlockOuter">
-                        <tr>
-                          <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
-                            <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyButtonBlock">
                       <tbody class="themezyButtonBlockOuter">
                         <tr>
@@ -835,7 +618,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" class="themezyButtonContentContainer" style="border-collapse: separate !important;border: 4px solid #D63F36;border-radius: 0px;background-color: #FFFFFF;">
                               <tbody>
                                 <tr>
-                                  <td align="center" valign="middle" class="themezyButtonContent" style="font-family: Arial; font-size: 24px; padding: 24px;">
+                                  <td align="center" valign="middle" class="themezyButtonContent" style="font-family: Arial; font-size: 22px; padding: 24px;">
                                     <a class="themezyButton " title="CLICK HERE TO SEE MORE" href="http://www.ozgrabnow.com/" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D63F36;">CLICK HERE TO SEE MORE</a>
                                   </td>
                                 </tr>
