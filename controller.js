@@ -33,9 +33,9 @@ angular.module('Newsletter', [])
         buy:'http://www.ozgrabnow.com/?fid=57625798e4b0c424b5dc8e15'
       }];
 
-      $http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php")
-      .success(function(response) {
-        console.log(response);
-      });
+      // $http.get("http://www.runoob.com/try/angularjs/data/Customers_JSON.php")
+      // .success(function(response) {
+      //   console.log(response);
+      // });
  
   });
