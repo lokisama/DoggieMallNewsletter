@@ -167,9 +167,8 @@
       text-align:left;
     }
     .bodyContainer .themezyTextContent a{
-      color:#6DC6DD;
-      font-weight:normal;
-      text-decoration:underline;
+      color:#606060;
+      text-decoration:none;
     }
     #templateColumns{
       background-color:#FFFFFF;
@@ -217,7 +216,7 @@
       font-weight:normal;
       text-decoration:underline;
     }
-    a.grabnow{
+    .grabnow{
         border-collapse: separate !important;
         color: #FFFFFF !important;
         border: 2px solid #D63F36;
@@ -359,7 +358,7 @@
       td[class=footerContainer] a[class=utilityLink]{
         display:block !important;
       }
-      a.grabnow{
+      .grabnow{
        
         display: block;
         text-align: center;
@@ -394,7 +393,9 @@
                                   <tr>
 
                                     <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:0;">
-                                      If you want to unsubscribe, <a href="*|MANAGESUB|*">click here</a>.
+                                      If you want to unsubscribe,
+                                      <a href="http://www.ozgrabnow.com/*|MANAGESUB|*">click here</a>
+                                      .
                                     </td>
                                   </tr>
                                 </tbody>
@@ -455,9 +456,7 @@
                         </tr>
                       </table>
                     </td>
-                    <td align="left" valign="top" class="columnsContainer" width="50%">
-                      
-                    </td>
+                    <td align="left" valign="top" class="columnsContainer" width="50%"></td>
                   </tr>
                 </table>
                 <!-- // END COLUMNS --> </td>
@@ -539,181 +538,186 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
                   <tr>
                     <td valign="top" class="bodyContainer">
-                    <div ng-repeat="obj in datas.data">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyCaptionBlock">
-                      <tbody class="themezyCaptionBlockOuter">
-                        <tr>
-                          <td class="themezyCaptionBlockInner" valign="top" style="padding:9px;">
-
-                            <table border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightContentOuter" width="100%">
-                              <tbody>
-                                <tr>
-                                  <td valign="top" class="themezyCaptionRightContentInner" style="padding:0 9px ;">
-                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightImageContentContainer">
-                                      <tbody>
-                                        <tr>
-                                          <td class="themezyCaptionRightImageContent" valign="top">
-
-                                            <img alt="" ng-src="{{obj.image}}" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <table class="themezyCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="264">
-                                      <tbody>
-                                        <tr>
-                                          <td valign="top" class="themezyTextContent">
-                                            <h3 class="null">
-                                              <span style="color:#0B0B0B" ng-bind="obj.title">4 In 1 Dual USB Car Charger Adapter</span>
-                                            </h3>
-                                            <br>
-                                            {{obj.desc}}
-                                            <br>
-                                            <br>
-                                            <strong><span style="font-size:24px">
-                                                <span style="color:#606060;">
-                                                  INSTEAD OF
-                                                  <span style="text-decoration:line-through;">{{obj.oldprice}}</span>
-                                                </span>
-                                                <a class="grabnow" href="{{obj.buy}}">
-                                                  VIEW AND BUY!
-                                                  <span style="color:#FFFFFF; font-size:28px">{{obj.price}}</span>
+                      <div ng-repeat="obj in datas.data">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyCaptionBlock">
+                          <tbody class="themezyCaptionBlockOuter">
+                            <tr>
+                              <td class="themezyCaptionBlockInner" valign="top" style="padding:9px;">
+                                <table border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightContentOuter" width="100%">
+                                  <tbody>
+                                    <tr>
+                                      <td valign="top" class="themezyCaptionRightContentInner" style="padding:0 9px ;">
+                                        <table align="left" border="0" cellpadding="0" cellspacing="0" class="themezyCaptionRightImageContentContainer">
+                                          <tbody>
+                                            <tr>
+                                              <td class="themezyCaptionRightImageContent" valign="top">
+                                                <a href="{{obj.buy}}" target="_blank">
+                                                  <img alt="" ng-src="{{obj.image}}" src="http://g02.a.alicdn.com/kf/HTB1RRxAJXXXXXcvXpXXq6xXFXXXf/2015-Hot-2015-Hot-Easy-to-Carry-4-In-1-Dual-USB-Car-Charger-Adapter-With.jpg" width="264" style="max-width:467px;" class="themezyImage"></a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                        <table class="themezyCaptionRightTextContentContainer" align="right" border="0" cellpadding="0" cellspacing="0" width="264">
+                                          <tbody>
+                                            <tr>
+                                              <td valign="top" class="themezyTextContent">
+                                                <h3 class="null">
+                                                  <a href="{{obj.buy}}" target="_blank">
+                                                    <span style="color:#0B0B0B" ng-bind="obj.title">4 In 1 Dual USB Car Charger Adapter</span>
+                                                  </a>
+                                                </h3>
+                                                <br>
+                                                <a href="{{obj.buy}}" ng-bind="obj.desc" target="_blank">
+                                                  1pc Two Feet Cover Wrench Opener Watch Back Case Opener Spanner Watch Handle Case Opener Repair Kit Tool Watch Accessories
                                                 </a>
-                                              </span></strong> 
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                                                <br>
+                                                <br>
+                                                <a href="{{obj.buy}}" target="_blank"> <strong><span style="font-size:24px">
+                                                      <span style="color:#606060;">
+                                                        INSTEAD OF
+                                                        <span style="text-decoration:line-through;" ng-bind="obj.oldprice | currency">$17.94</span>
+                                                      </span>
+                                                      <span class="grabnow">
+                                                        VIEW AND BUY!
+                                                        <span style="color:#FFFFFF; font-size:28px" ng-bind="obj.price | currency">$5.98</span>
+                                                      </span>
+                                                    </span></strong> 
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
 
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
-                      <tbody class="themezyDividerBlockOuter">
-                        <tr>
-                          <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
-                            <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
+                          <tbody class="themezyDividerBlockOuter">
+                            <tr>
+                              <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
+                                <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <span></span>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyButtonBlock">
-                      <tbody class="themezyButtonBlockOuter">
-                        <tr>
-                          <td style="padding-top:0; padding-right:18px; padding-bottom:0px; padding-left:18px;" valign="top" align="center" class="themezyButtonBlockInner">
-                            <table border="0" cellpadding="0" cellspacing="0" class="themezyButtonContentContainer" style="border-collapse: separate !important;border: 4px solid #D63F36;border-radius: 0px;background-color: #FFFFFF;">
-                              <tbody>
-                                <tr>
-                                  <td align="center" valign="middle" class="themezyButtonContent" style="font-family: Arial; font-size: 22px; padding: 24px;">
-                                    <a class="themezyButton " title="CLICK HERE TO SEE MORE" href="http://www.ozgrabnow.com/" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D63F36;">CLICK HERE TO SEE MORE</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
-                      <tbody class="themezyDividerBlockOuter">
-                        <tr>
-                          <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
-                            <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <span></span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <!-- // END BODY --> </td>
-          </tr>
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyButtonBlock">
+                        <tbody class="themezyButtonBlockOuter">
+                          <tr>
+                            <td style="padding-top:0; padding-right:18px; padding-bottom:0px; padding-left:18px;" valign="top" align="center" class="themezyButtonBlockInner">
+                              <table border="0" cellpadding="0" cellspacing="0" class="themezyButtonContentContainer" style="border-collapse: separate !important;border: 4px solid #D63F36;border-radius: 0px;background-color: #FFFFFF;">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" valign="middle" class="themezyButtonContent" style="font-family: Arial; font-size: 22px; padding: 24px 10px;">
+                                      <a class="themezyButton " title="CLICK HERE TO SEE MORE" href="http://www.ozgrabnow.com/" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #D63F36;">CLICK HERE TO SEE MORE</a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyDividerBlock">
+                        <tbody class="themezyDividerBlockOuter">
+                          <tr>
+                            <td class="themezyDividerBlockInner" style="padding: 24px 18px;">
+                              <table class="themezyDividerContent" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width: 4px;border-top-style: solid;border-top-color: #1F1D1F;">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <span></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END BODY --> </td>
+            </tr>
 
-          <tr>
-            <td align="center" valign="top">
-              <!-- BEGIN FOOTER // -->
-              <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
-                <tr>
-                  <td valign="top" class="footerContainer" style="padding-bottom:9px;">
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyTextBlock">
-                      <tbody class="themezyTextBlockOuter">
-                        <tr>
-                          <td valign="top" class="themezyTextBlockInner">
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN FOOTER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateFooter">
+                  <tr>
+                    <td valign="top" class="footerContainer" style="padding-bottom:9px;">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyTextBlock">
+                        <tbody class="themezyTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="themezyTextBlockInner">
 
-                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="themezyTextContentContainer">
-                              <tbody>
-                                <tr>
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="themezyTextContentContainer">
+                                <tbody>
+                                  <tr>
 
-                                  <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                    <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
-                                    <span style="font-size:14px">
-                                      This email was delivered to *|EMAIL|* from OzGrabNow.com .&nbsp;
-                                      <br>
-                                      If you want to unsubscribe,
-                                      <a href="*|MANAGESUB|*">click here</a>
-                                      .
-                                    </span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                                      <span style="font-size:14px">
+                                        This email was delivered to *|EMAIL|* from OzGrabNow.com .&nbsp;
+                                        <br>
+                                        If you want to unsubscribe,
+                                        <a href="http://www.ozgrabnow.com/*|MANAGESUB|*">click here</a>
+                                        .
+                                      </span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyTextBlock">
-                      <tbody class="themezyTextBlockOuter">
-                        <tr>
-                          <td valign="top" class="themezyTextBlockInner">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="themezyTextBlock">
+                        <tbody class="themezyTextBlockOuter">
+                          <tr>
+                            <td valign="top" class="themezyTextBlockInner">
 
-                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="themezyTextContentContainer">
-                              <tbody>
-                                <tr>
+                              <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" class="themezyTextContentContainer">
+                                <tbody>
+                                  <tr>
 
-                                  <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
+                                    <td valign="top" class="themezyTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
-                                    <span style="color:#363438">Copyright 2016 Ozgrabnow. All rights reserved.</span>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
+                                      <span style="color:#363438">Copyright 2016 Ozgrabnow. All rights reserved.</span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <!-- // END FOOTER --> </td>
-          </tr>
-        </table>
-        <!-- // END TEMPLATE --> </td>
-    </tr>
-  </table>
-</center>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END FOOTER --> </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE --> </td>
+      </tr>
+    </table>
+  </center>
 </body>
 </html>
